@@ -47,27 +47,3 @@ connection.connect()
 app.listen(port, () => {
     console.log(`Server is currently running on port ${port}`);
 });
-
-
-// function executeStatement() {
-//     let request = new Request('select * from [SADB].[dbo].Users', (err, rowCount) => {
-//         if(err) {
-//             console.log(err)
-//         } else {
-//             console.log(`${rowCount} rows`)
-//         }
-//         connection.close()
-//     })
-
-//     request.on('row', (cols) => {
-//         cols.forEach((col) => {
-//             if(col.value === null) {
-//                 console.log('NULL')
-//             } else {
-//                 console.log(col.value)
-//             }
-//         }) 
-//     })
-
-//     connection.execSql(request)
-// }
